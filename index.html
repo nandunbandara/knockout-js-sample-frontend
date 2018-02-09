@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script type="text/javascript" src="vendor/knockout-3.4.2.js"></script>
+</head>
+<body>
+    <p>First String: <b data-bind="text: firstString"></b></p>
+
+    <script>
+        function AppViewModel(){
+            this.firstString = "Hello World!";
+        }
+
+        ko.applyBindings(new AppViewModel());
+    </script>
+</body>
+</html>
