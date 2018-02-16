@@ -7,11 +7,13 @@
     <script type="text/javascript" src="vendor/knockout-3.4.2.js"></script>
 </head>
 <body>
-    <p>First String: <b data-bind="text: firstString"></b></p>
-
+    <div data-bind="visible: showFirstString">
+        <p>First String: <b data-bind="text: firstString"></b></p>
+    </div>
     <script>
         function AppViewModel(){
             this.firstString = "Hello World!";
+            this.showFirstString = false;
         }
 
         ko.applyBindings(new AppViewModel());
